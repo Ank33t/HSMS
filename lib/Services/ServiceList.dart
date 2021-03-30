@@ -1,5 +1,4 @@
 import 'dart:collection';
-
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'AddService.dart';
@@ -7,6 +6,10 @@ import 'Service.dart';
 import 'ServiceDetails.dart';
 
 class ServiceApp extends StatefulWidget {
+
+  String userType;
+
+  ServiceApp({Key key, this.userType = "default"}):super(key:key);
 
   @override
   _ServiceAppState createState() => _ServiceAppState();
@@ -72,13 +75,14 @@ class _ServiceAppState extends State<ServiceApp> {
           ),
         );
       },itemCount: list.length,),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: widget.userType == "Admin"?
+      FloatingActionButton(
         onPressed: (){Navigator.push(context,
           MaterialPageRoute(builder: (context) => AddService()),
         );},
         tooltip: 'Increment',
         child: Icon(Icons.add),
-      ),
+      ) : SizedBox(height: 0,)
     );
   }
 }

@@ -6,6 +6,7 @@ import 'package:hsms/firebase_auth_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:hsms/Members/MemberDetails.dart';
 
+import 'Payments/AddBill.dart';
 import 'Services/ServiceList.dart';
 
 class AdminHomePage extends StatefulWidget{
@@ -52,9 +53,9 @@ class _AdminHomePageState extends State<AdminHomePage>{
               FlatButton(onPressed: () {Navigator.push(context,
                 MaterialPageRoute(builder: (context) => EditProfile()),
               );},
-                  child: Image.asset(("images/profile.png"), width: 160, height: 130,)),
+                  child: Image.asset(("images/profile1.jpg"), width: 160, height: 130,)),
               FlatButton(onPressed: () {},
-                  child: Image.asset(("images/visitors.png"), width: 160, height: 130,)),
+                  child: Image.asset(("images/visitors1.png"), width: 160, height: 130,)),
             ],
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -91,7 +92,9 @@ class _AdminHomePageState extends State<AdminHomePage>{
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              FlatButton(onPressed: () {},
+              FlatButton(onPressed: () {Navigator.push(context,
+                MaterialPageRoute(builder: (context) => AddBills()),
+              );},
                   child: Image.asset(("images/bill.jpg"), width: 160, height: 130,)),
               FlatButton(onPressed: () {Navigator.push(context,
                 MaterialPageRoute(builder: (context) => ServiceApp()),
@@ -115,7 +118,7 @@ class _AdminHomePageState extends State<AdminHomePage>{
               FlatButton(onPressed: () {Navigator.push(context,
                 MaterialPageRoute(builder: (context) => Complaints(userType: widget.userType,)),
               );},
-                  child: Image.asset(("images/complaints.jpg"), width: 160, height: 130,)),
+                  child: Image.asset(("images/complaints1.jpg"), width: 160, height: 130,)),
               FlatButton(onPressed: () {Navigator.push(context,
                   MaterialPageRoute(builder: (context) => MemberApp()),
               );},

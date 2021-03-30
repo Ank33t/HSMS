@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'Complaints/Complaints.dart';
 import 'Notices/Notices.dart';
 import 'Profile.dart';
+import 'Services/ServiceList.dart';
 
 class HomePage extends StatefulWidget{
 
@@ -49,9 +50,9 @@ class _HomePageState extends State<HomePage>{
                   FlatButton(onPressed: () {Navigator.push(context,
                     MaterialPageRoute(builder: (context) => EditProfile()),
                   );},
-                  child: Image.asset(("images/profile.png"), width: 160, height: 130,)),
+                  child: Image.asset(("images/profile1.jpg"), width: 160, height: 130,)),
                   FlatButton(onPressed: () {},
-                      child: Image.asset(("images/visitors.png"), width: 160, height: 130,)),
+                      child: Image.asset(("images/visitors1.png"), width: 160, height: 130,)),
                 ],
               ),
               Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -90,7 +91,9 @@ class _HomePageState extends State<HomePage>{
                 children: [
                   FlatButton(onPressed: () {},
                       child: Image.asset(("images/bill.jpg"), width: 160, height: 130,)),
-                  FlatButton(onPressed: () {},
+                  FlatButton(onPressed: () {Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ServiceApp()),
+                  );},
                       child: Image.asset(("images/services.png"), width: 160, height: 130,)),
                 ],
               ),
@@ -110,7 +113,7 @@ class _HomePageState extends State<HomePage>{
                   FlatButton(onPressed: () {Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Complaints(userType: widget.userType,)),
                   );},
-                      child: Image.asset(("images/complaints.jpg"), width: 160, height: 130,)),
+                      child: Image.asset(("images/complaints1.jpg"), width: 160, height: 130,)),
                 ],
               ),
               Row(mainAxisAlignment: MainAxisAlignment.spaceAround,

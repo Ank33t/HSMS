@@ -22,10 +22,6 @@ class _NoticesState extends State<Notices> {
   final HashMap<String,String> map = new HashMap<String,String>();
   void getNotice()
   {
-    // list.add("Ankeet");
-    // list.add("Manav");
-    // map[list[0]] = C";
-    // map[list[1]] = "Notice1";
     list.clear();
     map.clear();
     DatabaseReference ref = FirebaseDatabase.instance.reference();
